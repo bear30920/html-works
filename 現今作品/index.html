@@ -2,342 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="desktop.css"media="screen and (min-width:960px)">
+    <link rel="stylesheet" href="mobile.css"media="screen and (max-width:959px)">
     <style>
-        body,p,h1,h2,h3,h4,h5,h6 {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: verdana;
-            font-size: 14px;
-        }
-        h2 {
-            font-family: "oswald";
-            font-weight: 400;
-        }
-        p {
-            line-height: 22px;
-        }
-        .full {
-            width: 100%;
-        }
-        .fixed {
-            width: 960px;
-            margin: auto;
-        }
-        .clearfix::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-        nav {
-            height: 70px;
-            background-color: #333;
-        }
-        #logo {
-            float: left;
-            width: 100px;
-            height: 70px;
-            background-color: #ccc;
-        }
-        #nav {
-            float: right;
-        }
-        #nav ul {
-            margin: 0;
-            padding: 0;
-        }
-        #nav li {
-            list-style-type: none;
-            float: left;
-        }
-        #nav a {
-            color: #eee;
-            display: block;
-            text-decoration: none;
-            font-family: verdana;
-            font-size: 14px;
-            line-height: 70px;
-            padding-left: 15px;
-            padding-right: 15px;
-            transition: all .2s;
-        }
-        #nav a:hover {
-            background-color: #d31f1f;
-        }
-        header {
-            height: 560px;
-            background-image: url(images/header.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        #news {
-            padding-top: 75px;
-            padding-bottom: 75px;
-            background-color: #ddd;
-        }
-        .news-box {
-            width: 320px;
-            float: left;
-        }
-        .news-box-icon {
-
-
-            float: left;
-            color:#fff;
-            text-align: center;
-            line-height: 94px;
-        }
-        .news-box-content {
-            float: left;
-            width: 230px;
-            margin-left: 10px;
-        }
-        .news-box-content h2 {
-            margin-bottom: 25px;
-        }
-        #service {
-            padding-top:75px;
-            padding-bottom: 75px;
-        }
-        .service-content {
-            width: 640px;
-            float: left;
-        }
-        .service-img {
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            background-image: url(images/header.jpg);
-            background-size: cover;
-            float: left;
-            margin-left: 40px;
-            
-        }
-        .slogan {
-            border-top: 1px solid #ccc;
-            border-bottom: 1px solid #ccc;
-/*            line-height: 38px;*/
-            font-size: 1.4em;
-            padding-top: 8px;
-            padding-bottom: 10px;
-            color: #e74d3c;
-            margin-top: 30px;
-            margin-bottom: 30px; 
-        }
-        .service-content-box {
-            float: left;
-            width: 320px;
-        }
-        .service-content-box p {
-            margin-bottom: 30px;
-        }
-        .btn {
-            padding:8px 20px;
-/*            width: 120px;*/
-            color: #fff;
-            border-radius: 80px;
-            font-family: "Oswald";
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
-        }
-        .red {
-            background-color: #e74d3c;
-        }
-        .black {
-            background-color: #222;
-        }
-        #subs {
-            padding-top: 50px;
-            padding-bottom: 50px;
-            border-radius: 10px;
-            color:#fff;
-        }
-        #subs h2 {
-            margin-bottom: 20px;
-        }
-        .subs-left {
-            float: left;
-            width:450px;
-            padding-left: 15px;
-            padding-right: 15px;
-            
-        }
-        .subs-left-icon {
-            float: left;
-        }
-        .subs-left-content {
-            float:left;
-            width: 360px;
-            padding-left: 15px;
-        }
-        .subs-right {
-            float: left;
-            width:450px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        .circle {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-        }
-        input {
-            border: 0;
-        }
-        textarea {
-            border: 0;
-            resize:none;
-        }
-        .subs-right input[type=text]{
-            padding-top: 11px;
-            padding-bottom: 8px;
-            border-radius: 30px;
-            width: 280px;
-            padding-left: 15px;
-            font-style: italic;
-        }
-        #contact {
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-        #contact h2 {
-            margin-bottom: 30px;
-        }
-        .contact-left {
-            float:left;
-            width: 300px;
-            padding: 0 10px;
-        }
-        .contact-left-box {
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-        .contact-left-box-icon {
-            float: left;
-        }
-        .contact-left-box-content {
-            float: left;
-            width: 215px;
-            margin-left: 10px;
-        }
-        hr {
-            border-bottom: 1px solid #ccc;
-            border-top: 0;
-        }
-        .more {
-            color: #e74d3c;
-            text-decoration: none;
-        }
-         .contact-center {
-            float:left;
-            width: 300px;
-            padding: 0 10px;
-        }
-        .contact-center-box {
-            background-color: #e7e7e7;
-            padding-left: 35px;
-            padding-right: 35px;
-            padding-top: 20px
-        }
-        .contact-center-box input[type=text] {
-            width: 215px;
-            height: 40px;
-            border-radius: 50px;
-            padding-left: 15px;
-        }
-        .contact-center-box textarea {
-            border-radius: 12px;
-            padding-left: 15px;
-            width: 215px;
-            height: 120px;
-            
-        }
-        .contact-center-box input,.contact-center-box textarea,.contact-center-box p {
-            margin-bottom: 10px;
-        }
-        .contact-right {
-            float:left;
-            width: 300px;
-            padding: 0 10px;
-        }
-        .contact-right-box {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            
-        }
-        .contact-right-box-icon {
-            width: 60px;
-            float: left;
-            text-align:center;
-        }
-        .contact-right-box-content {
-            width: 225px;
-            float: left;
-            margin-left: 15px;
-        }
-        footer {
-            padding-top: 50px;
-            padding-bottom: 50px;
-            background-color: #1f2727;
-            height: 80px;
-        }
-        .copyright {
-            float: left;
-            width: 70%;
-        }
-        .sns {
-            float: right;
-            width: 30%;
-            
-        }
-        .copyright a {
-            color: #e5e8e8;
-            font-size: 16px;
-            text-decoration: none;
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        
-        .nav {
-            color: #535b5b;
-        }
-        
-        .nav a:hover {
-            color: #f2f23c;
-            
-        }
-        
-        .author {
-            color: #cb4638;
-            margin-left: 30px;
-            margin-top: 10px;
-        }
-        
-        .sns-circle {
-            color: #fcfdfd;
-            text-align: center;
-            line-height: 50px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: red;
-            margin-left: 10px;
-        }
-        
-        footer .fixed {
-            padding-top: 20px;
-        }
-        
-        .social {
-            text-align: right;
-        }
-        
+/*        @import url(desktop.css);*/
     </style>
 </head>
 <body>
@@ -437,7 +109,7 @@
                     </p>
                 </div>
             </div>
-            <hr>
+            <hr>     
             <div class="contact-left-box clearfix">
                 <div class="contact-left-box-icon circle black"></div>
                 <div class="contact-left-box-content">
@@ -511,22 +183,18 @@
     <footer class="full clearfix">
         <div class="fixed">
             <div class="copyright">
-                <div class="nav">
-                    <a href=""></a>
-                    <a href="">Home</a>/
-                    <a href="">About</a>/
-                    <a href="">Services</a>/
-                    <a href="">Portfolio</a>/
+                <div clas="nav">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Services</a>
+                    <a href="">Portfolio</a>
                     <a href="">Contact</a>
                 </div>
-                <div class="author">Ken Design 2016&copy; Copyright</div>
+                <div> Design 2016&copy; Copyright</div>
             </div>
             <div class="sns">
-                <div class="social">
-                    <a href=""><span class="sns-circle fa fa-facebook fa-2x"></span></a>
-                    <a href=""><span class="sns-circle fa fa-twitter fa-2x"></span></a>
-                    <a href=""><span class="sns-circle fa fa-linkedin fa-2x"></span></a>
-                </div>
+                <a href=""><span class="fa fa-facebook fa-2x"></span></a>
+                <a href=""><span class="fa fa-twitter fa-2x"></span></a>
             </div>
         </div>
     </footer>
